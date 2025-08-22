@@ -2,14 +2,14 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        EnigmaMachine Enigma_K = new EnigmaMachine(EnigmaVersion.MODEL_K);
+        System.out.println("Enigma successfully set up");
+        char input = 'A';
+        char output = Enigma_K.encode_char(input);
+        System.out.println("Enigma encodes the char \'"+input+"\' as \'"+output+"\'.");
+        Enigma_K.printencodingpath();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("Success");
+        return;
     }
 }
